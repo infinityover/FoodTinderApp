@@ -1,15 +1,26 @@
 <div class="full-body">
-  <ion-card class="full-card">
+  <ion-card class="full-card animated bounceIn finity faster">
     <img class="img-background" src="/assets/photo1.jpg">
     <ion-card class="info-card">
     </ion-card>
     <ion-card-content class="card-content">
       <h1 class="title">The tropical restaurant</h1>
       <p class="info">California . Brasilian Food</p>
-      <div>
+      <div class="star-rate">
         <bar-rating [(rate)]="cssRate" [max]="5"></bar-rating>
       </div>
     </ion-card-content>
   </ion-card>
-  
+  <ion-fab-button class="dislike-button">
+    <ion-icon name="thumbs-down" class="thumbs-down-button"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-button class="like-button">
+    <ion-icon name="thumbs-up" class="thumbs-up-button"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-button class="return-button" size="small">
+      <i class="material-icons icon">undo</i>
+  </ion-fab-button>
+  <ion-fab-button class="list-button" size="small">
+      <i class="material-icons icon">sort</i>
+  </ion-fab-button>
 </div>

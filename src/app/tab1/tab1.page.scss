@@ -1,17 +1,17 @@
-.full-body{
+.full-body {
   background-color: #ffffff;
   width: 100%;
   height: 100%;
 }
 
-.img-background{
+.img-background {
   position: absolute;
   color: #ffffff;
   width: 100%;
   height: 100%;
 }
 
-.info-card{
+.info-card {
   position: absolute;
   top: 70%;
   color: #ffffff;
@@ -22,26 +22,112 @@
   filter: blur(1px);
   -webkit-filter: blur(1px);
 }
-.full-card{
+
+.ios {
+  .info-card {
+    top: 67%;
+  }
+}
+
+.full-card {
   height: 80%;
 }
 
+.full-card.ng-enter-stagger {
+  -webkit-animation-delay:200ms;
+  animation-delay:200ms;
 
-.card-content{
+  /* override to make sure it's not inherited from other styles */
+  -webkit-animation-duration:0;
+  animation-duration:0;
+}
+.full-card.ng-enter{
+  -webkit-animation: fadeInLeft 1s;
+  animation: fadeInLeft .5s;
+}
+
+.card-content {
   top: 73%;
   left: 3%;
   padding-left: 10px;
   padding-right: 5px;
   line-height: 0.8;
 }
-.title{
+
+.title {
   font-size: 20px;
   font-family: Open Sans, Helvetica, sans-serif;
   font-weight: bold;
-  color: rgba(255, 255, 255,.9);
+  color: rgba(255, 255, 255, .9);
 }
-.info{
+
+.info {
   font-size: 15px;
-  font-family: Open Sans, Helvetica, sans-serif;
-  color: rgba(255, 255, 255,0.5);
+  display: block;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dislike-button{
+  --box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  --background: #ffffff;
+  --background-activated: #95D5CA;
+  left: 54%;
+  top: 87% !important;
+  position: absolute; 
+}
+
+.like-button{
+  --box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  --background: #ffffff;
+  --background-activated: #95D5CA;
+  left: 27%;
+  top: 87% !important;
+  position: absolute;
+}
+
+.list-button{
+  --box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  --background: #ffffff;
+  --background-activated: #95D5CA;
+  left: 5%;
+  top: 87% !important;
+  position: absolute;
+  .icon{
+    color: #000000;
+  }
+}
+
+.return-button{
+  --box-shadow: 0 3px 5px -1px rgba(146, 135, 135, 0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
+  --background: #ffffff;
+  left: 75%;
+  top: 87% !important;
+  position: absolute;
+  .icon{
+    color: #000000;
+  }
+}
+
+.thumbs-down-button{
+  color: #00DDB8;
+  position: absolute;
+}
+
+.thumbs-up-button{
+  color: #00DDB8;
+}
+
+
+.android{
+  .star-rate{
+    line-height: 0px !important;
+  }
+}
+.star-rate{
+  line-height: 5px !important;
 }

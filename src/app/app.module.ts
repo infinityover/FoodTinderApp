@@ -9,8 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarRatingModule } from "ngx-bar-rating";
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -19,7 +18,9 @@ import { BarRatingModule } from "ngx-bar-rating";
     imports: [BrowserModule,
       IonicModule.forRoot(), 
       AppRoutingModule,
-      BarRatingModule],
+      BarRatingModule,
+      BrowserAnimationsModule,
+      BrowserModule],
   providers: [
     StatusBar,
     SplashScreen,
