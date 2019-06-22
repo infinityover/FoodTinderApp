@@ -1,4 +1,47 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+.full-body{
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.img-background{
+  position: absolute;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+}
+
+.info-card{
+  position: absolute;
+  top: 70%;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  left: -5px;
+  height: 25%;
+  width: 93%;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
+.full-card{
+  height: 80%;
+}
+
+
+.card-content{
+  top: 73%;
+  left: 3%;
+  padding-left: 10px;
+  padding-right: 5px;
+  line-height: 0.8;
+}
+.title{
+  font-size: 20px;
+  font-family: Open Sans, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(255, 255, 255,.9);
+}
+.info{
+  font-size: 15px;
+  font-family: Open Sans, Helvetica, sans-serif;
+  color: rgba(255, 255, 255,0.5);
 }
