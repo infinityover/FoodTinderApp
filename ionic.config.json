@@ -1,5 +1,7 @@
 {
   "name": "FoodTinderApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
