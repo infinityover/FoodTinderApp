@@ -1,133 +1,69 @@
-.full-body {
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
+.full-card{
+  grid-row: 1;
 }
 
-.img-background {
-  position: absolute;
-  color: #ffffff;
-  width: 100%;
-  height: 100%;
+
+.img-background{
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #fff;
+  color: #444;
+  position: relative;
 }
 
-.info-card {
+.info-card{
   position: absolute;
-  top: 70%;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
-  left: -5px;
-  height: 25%;
+}
+.full-body{
+
+  display: grid;
+  grid-template-rows: 400px 200px;
+  background-color: #fff;
+}
+.card-content{
+  position: absolute;
+  top: 58%;
+}
+
+.background-infoCard{
   width: 93%;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
+  height: 82%;
+  top: 14%;
+  position: absolute;
+  left: 10px;
+  background: url("/assets/photo1.jpg");
+  opacity: 0.4;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  border-radius: 16px;
+  border-radius: 11px;
 }
+.card-content{
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  top: 64%;
+  width: 95%;
+  left: 2.5%;
 
-.ios {
-  .info-card {
-    top: 67%;
+
+  h1{
+    font-size: 23px;
+    color: #fff;
+    margin-left: -10px;
+  }
+  p{
+    font-size: 14px;
+    color: #fff;
+    margin-left: -10px;
   }
 }
 
-.full-card {
-  height: 80%;
-}
-
-.full-card.ng-enter-stagger {
-  -webkit-animation-delay:200ms;
-  animation-delay:200ms;
-
-  /* override to make sure it's not inherited from other styles */
-  -webkit-animation-duration:0;
-  animation-duration:0;
-}
-.full-card.ng-enter{
-  -webkit-animation: fadeInLeft 1s;
-  animation: fadeInLeft .5s;
-}
-
-.card-content {
-  top: 73%;
-  left: 3%;
+.understairs{
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
   padding-left: 10px;
-  padding-right: 5px;
-  line-height: 0.8;
 }
+.br{
 
-.title {
-  font-size: 20px;
-  font-family: Open Sans, Helvetica, sans-serif;
-  font-weight: bold;
-  color: rgba(255, 255, 255, .9);
-}
-
-.info {
-  font-size: 15px;
-  display: block;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.dislike-button{
-  --box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
-  --background: #ffffff;
-  --background-activated: #95D5CA;
-  left: 54%;
-  top: 87% !important;
-  position: absolute; 
-}
-
-.like-button{
-  --box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
-  --background: #ffffff;
-  --background-activated: #95D5CA;
-  left: 27%;
-  top: 87% !important;
-  position: absolute;
-}
-
-.list-button{
-  --box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
-  --background: #ffffff;
-  --background-activated: #95D5CA;
-  left: 5%;
-  top: 87% !important;
-  position: absolute;
-  .icon{
-    color: #73B8D1;
-  }
-}
-
-.return-button{
-  --box-shadow: 0 3px 5px -1px rgba(146, 135, 135, 0.2), 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12);
-  --background: #ffffff;
-  left: 75%;
-  top: 87% !important;
-  position: absolute;
-  .icon{
-    color: #73B8D1;
-  }
-}
-
-.thumbs-down-button{
-  color: #00DDB8;
-  position: absolute;
-}
-
-.thumbs-up-button{
-  color: #00DDB8;
-}
-
-
-.android{
-  .star-rate{
-    line-height: 0px !important;
-  }
-}
-.star-rate{
-  line-height: 5px !important;
+  margin: 0px !important;
 }
