@@ -26,7 +26,7 @@ import { environment } from '../environments/environment';
       BarRatingModule,
       BrowserAnimationsModule,
       BrowserModule,
-      AngularFireModule.initializeApp(environment.firebaseConfig, 'letslearn-dev'),
+      AngularFireModule.initializeApp(environment.firebaseConfig, 'tinderfoodapp'),
       AngularFireDatabaseModule,
       AngularFireAuthModule
     ],
