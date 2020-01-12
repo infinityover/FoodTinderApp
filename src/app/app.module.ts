@@ -12,6 +12,11 @@ import { BarRatingModule } from "ngx-bar-rating";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,7 +25,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       AppRoutingModule,
       BarRatingModule,
       BrowserAnimationsModule,
-      BrowserModule],
+      BrowserModule,
+      AngularFireModule.initializeApp(environment.firebaseConfig, 'letslearn-dev'),
+      AngularFireDatabaseModule,
+      AngularFireAuthModule
+    ],
   providers: [
     StatusBar,
     SplashScreen,
