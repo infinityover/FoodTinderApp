@@ -12,10 +12,10 @@ import { BarRatingModule } from "ngx-bar-rating";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,8 +27,8 @@ import { environment } from '../environments/environment';
       BrowserAnimationsModule,
       BrowserModule,
       AngularFireModule.initializeApp(environment.firebaseConfig, 'tinderfoodapp'),
-      AngularFireDatabaseModule,
-      AngularFireAuthModule
+      AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+      AngularFireStorageModule // imports firebase/storage only needed for storage features
     ],
   providers: [
     StatusBar,

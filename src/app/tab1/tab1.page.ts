@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 import { TimelineLite, Back, Power1, SlowMo, TimelineMax } from 'gsap'
-import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-tab1',
@@ -11,18 +12,19 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class Tab1Page {
   menu = new TimelineMax({paused:false, reversed:true});
   formRating = 3;
-  constructor( public db: AngularFireDatabase){
-    const rest = this.db.list('restaurant').valueChanges().subscribe((resp) => {
-      resp.forEach(element => {
-        console.log(element)
-      });
+
+  items: Observable<any[]>;
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('/restaurant').valueChanges();
+    this.items.subscribe((ele) => {
+      console.log(ele)
     });
+  }
     // rest.forEach(element => {
     //   console.log(element)
     // });
     
   
-  }
   
   ngOnInit(){
     this.createMenuAnim()

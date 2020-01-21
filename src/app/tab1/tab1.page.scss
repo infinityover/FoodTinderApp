@@ -17,14 +17,9 @@
 .full-body{
 
   display: grid;
-  grid-template-rows: 400px 200px;
+  grid-template-rows: 88% 12%;
   background-color: #fff;
 }
-.card-content{
-  position: absolute;
-  top: 58%;
-}
-
 .background-infoCard{
   width: 93%;
   height: 82%;
@@ -39,9 +34,10 @@
   border-radius: 11px;
 }
 .card-content{
+  position: absolute;
   background: rgba(255,255,255,0.2);
   border-radius: 4px;
-  top: 64%;
+  top: 78%;
   width: 95%;
   left: 2.5%;
 
@@ -62,6 +58,8 @@
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr;
   padding-left: 10px;
+
+  justify-items: center;
 }
 .br{
 
